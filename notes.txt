@@ -1,0 +1,7 @@
+For our project
+should have 5 pages Home , ABout Us, COntact, Gallery, Account
+Each page should be able to link each other
+our Navigation should be a component 
+our Footer should be a component
+images should be optimised
+use tailwind css and tailwind UI

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" 
+        integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <link rel="stylesheet" href="main.css">
+    <style>
+       body{
+        font-family: serif;
+       }
+        [x-cloak]{
+            display: none;
+        }
+    </style>
+    <title>Contact</title>
+</head>
+<body >
+     <!-- import the navigation element using x-html-->
+     <div x-data="{}">
+        <div x-html="(await axios.get('./component/nav.html')).data"></div>
+    </div>
+    <!-- //hero section starts here -->
+    <div class="relative height: 100vh">
+        <div class="h-screen overflow-hidden">
+            <img  src="../assets/images/contact.png"/>
+        </div>
+        <!-- <div class="absolute inset-0 place-items-center w-fit"> -->
+        <div class="w-4/5 absolute inset-0 opacity-90 flex mx-auto md:w-fit justify-items-center items-center ">
+            <div class=" p-4 bg-slate-900 rounded-2xl">
+                <h1 class="text-4xl md:text-6xl text-orange-700 font-extrabold text-center font-serif  mb-4">
+                    Contact Us
+                </h1>
+                <p class=" text-sm md:text-base text-slate-300 text-center tracking-wider">
+                    Our dedicated team of passionate developers at your finger tips.
+                </p>
+                <div class=" my-10 mx-auto w-fit flex-col md:flex md:flex-row items-center justify-center gap-x-6 lg:justify-start">
+                    <a href="#" class="rounded-md bg-orange-700 px-3.5 py-2.5 text-sm font-semibold text-gray-50 shadow-sm hover:bg-gray-100 hover:text-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Send a Message</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-white">Book a Call <span aria-hidden="true">→</span></a>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero section ends here -->
+
+        <!-- import the navigation element using x-html-->
+        <div x-data="{}">
+        <div x-html="(await axios.get('./component/footer.html')).data"></div>
+    </div>
+   
+</body>
+</html>
